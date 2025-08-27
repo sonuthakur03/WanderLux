@@ -1,6 +1,6 @@
 <?php
 
-include './backend/connection.php';
+include '../backend/connection.php';
 
 $sql = "SELECT title, country, description, best_season, price_range, highlights, image_url FROM destinations LIMIT 3";
 $destinations = $conn->query($sql);
@@ -13,6 +13,7 @@ $destinations = $conn->query($sql);
 <body>
 
     <div class="container">
+        <h2>Favorite Destinations</h2>
         <?php foreach ($destinations as $dest): ?>
             <div class="card">
                 <img src="<?php echo htmlspecialchars($dest['image_url']); ?>" alt="<?php echo htmlspecialchars($dest['title']); ?>">

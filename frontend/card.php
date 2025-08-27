@@ -13,16 +13,16 @@ $result = $conn->query($sql);
 
         <div class="destinations-grid">
             <?php while ($row = $result->fetch_assoc()) { ?>
-                <div class="destination-card animate-on-scroll"
-                    style="background-image: url('<?php echo $row['image_url']; ?>');">
+                <div class="destination-card" style="background-image:url('<?php echo $row['image_url']; ?>');">
                     <div class="destination-info">
                         <h3><?php echo $row['title']; ?>, <?php echo $row['country']; ?></h3>
                         <p><?php echo $row['description']; ?></p>
                     </div>
                 </div>
+
             <?php } ?>
         </div>
 
-        <a href="#" class="btn-primary">Explore All Destinations</a>
+        <a href="./frontend/destinations.php" class="btn-primary">Explore All Destinations</a>
     </div>
 </section>
