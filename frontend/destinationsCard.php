@@ -14,26 +14,30 @@ $destinations = $conn->query($sql);
 
     <div class="container">
         <h2>Favorite Destinations</h2>
-        <?php foreach ($destinations as $dest): ?>
-            <div class="card">
-                <img src="<?php echo htmlspecialchars($dest['image_url']); ?>" alt="<?php echo htmlspecialchars($dest['title']); ?>">
-                <div class="card-body">
-                    <div class="card-title"><?php echo htmlspecialchars($dest['title']); ?></div>
-                    <div class="card-location"><?php echo htmlspecialchars($dest['country']); ?></div>
-                    <div class="card-description"><?php echo htmlspecialchars($dest['description']); ?></div>
-                    <div class="card-info">
-                        Best Season: <?php echo htmlspecialchars($dest['best_season']); ?><br>
-                        Price Range: <?php echo htmlspecialchars($dest['price_range']); ?>
+        <div class="card-container">
+            <?php foreach ($destinations as $dest): ?>
+                <div class="card">
+                    <img src="<?php echo htmlspecialchars($dest['image_url']); ?>" alt="<?php echo htmlspecialchars($dest['title']); ?>">
+                    <div class="image-overlay">
+                        <div class="card-title"><?php echo htmlspecialchars($dest['title']); ?></div>
+                        <div class="card-location"><?php echo htmlspecialchars($dest['country']); ?></div>
                     </div>
-                    <div class="card-highlights">
-                        Highlights: <?php echo htmlspecialchars($dest['highlights']); ?>
+                    <div class="card-body">
+                        <span class="badge">Popular</span>
+                        <div class="card-description"><?php echo htmlspecialchars($dest['description']); ?></div>
+                        <div class="destination-details">
+                            <span>🗓️ <?php echo htmlspecialchars($dest['best_season']); ?></span>
+                            <span>💰 <?php echo htmlspecialchars($dest['price_range']); ?></span>
+                        </div>
+                        <div class="card-highlights">
+                            <?php echo htmlspecialchars($dest['highlights']); ?>
+                        </div>
+                        <a href="#" class="explore-btn">Explore Destination</a>
                     </div>
-                    <a href="#" class="explore-btn">Explore Destination</a>
                 </div>
-            </div>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+        </div>
     </div>
-
 </body>
 
 </html>

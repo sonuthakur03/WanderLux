@@ -5,9 +5,9 @@
     <link rel="stylesheet" href="./css/style.css">
     <style>
         /* Hero */
-        .herohotel {
+        .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url("https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80") center/cover no-repeat;
+                url("https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80") center/cover no-repeat;
             color: #fff;
             text-align: center;
             padding: 50px 20px;
@@ -18,7 +18,7 @@
             flex-direction: column;
         }
 
-        .herohotel h1 {
+        .hero h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
         }
@@ -32,14 +32,14 @@
             font-size: 1rem;
         }
 
-        .hotels {
+        .transport {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
         }
 
-        .hotels h2 {
+        .transport h2 {
             font-size: 2.2rem;
             color: #222;
             margin-top: 10px;
@@ -71,17 +71,44 @@
         }
 
         .badge {
-            background: #0984e3;
+            background: #6c5ce7;
             color: #fff;
             padding: 4px 8px;
             border-radius: 5px;
             font-size: 0.8rem;
         }
 
+        .route {
+            font-weight: bold;
+            color: #666;
+            margin: 8px 0;
+            font-size: 1rem;
+        }
+
+        .route::before {
+            content: "📍";
+            margin-right: 5px;
+        }
+
+        .transport-details {
+            display: flex;
+            justify-content: space-between;
+            margin: 12px 0;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .transport-details span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
         .price {
             font-size: 1.2rem;
             font-weight: bold;
             margin: 10px 0;
+            color: #e17055;
         }
 
         .price span {
@@ -102,6 +129,18 @@
         .book-btn:hover {
             background: #019870;
         }
+
+        .desc {
+            color: #666;
+            margin: 8px 0;
+            line-height: 1.4;
+        }
+
+        .rating {
+            color: #f39c12;
+            font-size: 0.9rem;
+            margin: 8px 0;
+        }
     </style>
 </head>
 
@@ -110,13 +149,13 @@
     <?php include "header.php" ?>
 
     <!-- Hero -->
-    <section class="herohotel">
-        <h1>Discover Premium Hotels</h1>
-        <p>From luxury resorts to boutique experiences, find your perfect stay with exclusive deals and expert recommendations.</p>
-        <input type="text" class="search-box" placeholder="Search hotels, destinations...">
+    <section class="hero">
+        <h1>Reliable Transport Solutions</h1>
+        <p>From buses and flights to car rentals and helicopter tours, find convenient and safe transport options for your journey across Nepal.</p>
+        <input type="text" class="search-box" placeholder="Search routes, transport types...">
     </section>
 
-    <?php include "hotelsCard.php" ?>
+    <?php include "transportCard.php" ?>
 
     <?php include "footer.php" ?>
 

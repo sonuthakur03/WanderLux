@@ -6,7 +6,7 @@ $sql = "SELECT title, country, description, image_url FROM destinations LIMIT 3"
 $result = $conn->query($sql);
 ?>
 
-<section class="destinations" id="destinations">
+<section class="destinationsCard" id="destinations">
     <div class="destinations-container">
         <h2>Popular Destinations</h2>
         <p class="destinations-subtitle">Discover the world's most breathtaking locations with our expert travel guides.</p>
